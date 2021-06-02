@@ -7,7 +7,7 @@ if ($_SESSION['login'] != "true") {
 
 require 'koneksi.php';
 
-$sql = "SELECT barang.*, (SELECT COUNT(*) FROM kuantitas WHERE kuantitas.id_barang = barang.id_barang) as jumlah, (SELECT COUNT(*) FROM konfirmasi WHERE konfirmasi.id_barang = barang.id_barang) as jumlah_dipakai FROM `barang`";
+$sql = "SELECT barang.*, (SELECT COUNT(*) FROM kuantitas WHERE kuantitas.id_barang = barang.id_barang) as jumlah, (SELECT COUNT(*) FROM konfirmasi WHERE konfirmasi.id_barang = barang.id_barang AND konfirmasi.status_kembali = 0) as jumlah_dipakai FROM `barang`";
 
 $query = mysqli_query($koneksi, $sql);
 

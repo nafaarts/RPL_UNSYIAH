@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 02, 2021 at 10:51 AM
+-- Generation Time: Jun 02, 2021 at 06:47 PM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -61,15 +61,23 @@ CREATE TABLE `konfirmasi` (
 --
 
 INSERT INTO `konfirmasi` (`id_konfirmasi`, `id_kuantitas`, `id_barang`, `tgl_pinjem`, `tgl_kembali`, `id_user`, `status_kembali`) VALUES
-(43, 0, 1, 1622505600, 1623196800, 1, 0),
-(44, 0, 2, 1622505600, 1623196800, 1, 0),
-(45, 0, 2, 1622505600, 1623196800, 1, 0),
-(46, 0, 3, 1622505600, 1623196800, 1, 0),
-(47, 0, 4, 1622505600, 1623196800, 1, 0),
-(48, 0, 1, 1622592000, 1622764800, 3, 0),
-(49, 0, 3, 1622592000, 1622764800, 3, 0),
-(50, 0, 3, 1622592000, 1622764800, 3, 0),
-(51, 0, 8, 1622592000, 1622764800, 3, 0);
+(43, 0, 1, 1622505600, 1623196800, 1, 1),
+(44, 0, 2, 1622505600, 1623196800, 1, 1),
+(45, 0, 2, 1622505600, 1623196800, 1, 1),
+(46, 0, 3, 1622505600, 1623196800, 1, 1),
+(47, 0, 4, 1622505600, 1623196800, 1, 1),
+(48, 0, 1, 1622592000, 1622764800, 3, 1),
+(49, 0, 3, 1622592000, 1622764800, 3, 1),
+(50, 0, 3, 1622592000, 1622764800, 3, 1),
+(51, 0, 8, 1622592000, 1622764800, 3, 1),
+(52, 0, 1, 1622592000, 1622851200, 4, 1),
+(53, 0, 2, 1622592000, 1622851200, 4, 0),
+(54, 0, 2, 1622592000, 1622851200, 4, 1),
+(55, 0, 6, 1622566800, 1622739600, 6, 0),
+(56, 0, 6, 1622566800, 1622739600, 6, 0),
+(57, 0, 5, 1625011200, 1625097600, 5, 0),
+(58, 0, 5, 1625788800, 1625875200, 1, 1),
+(59, 0, 1, 1622678400, 1623974400, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -129,7 +137,8 @@ INSERT INTO `user` (`id_user`, `nik`, `nama`, `pass`, `hak_akses`) VALUES
 (2, '0987654321', 'agus', '123', 'admin'),
 (3, '123123123', 'Naufal Alfadhil', '123123', 'user'),
 (4, '456343222', 'Daffaq SP', '123', 'user'),
-(5, '6789012391283', 'Agus Budiman', '123', 'user');
+(5, '6789012391283', 'Agus Budiman', '123', 'user'),
+(6, '017823701823', 'Panjul', '123', 'user');
 
 --
 -- Indexes for dumped tables
@@ -173,7 +182,7 @@ ALTER TABLE `barang`
 -- AUTO_INCREMENT for table `konfirmasi`
 --
 ALTER TABLE `konfirmasi`
-  MODIFY `id_konfirmasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id_konfirmasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `kuantitas`
@@ -185,4 +194,4 @@ ALTER TABLE `kuantitas`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
