@@ -57,6 +57,7 @@ if (isset($_POST['submit'])) {
         <h1 class="text-center" style="letter-spacing: 0.1em;">SIMPAN DESA</h1>
         <p class="text-center">Sistem Informasi Peminjaman Peralatan Desa</p>
         <div class="col-md-6 m-auto">
+            <?php if (isset($_GET['status'])) : ?>
             <?php if ($_GET['status'] == "registered") : ?>
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <strong>Selamat!</strong> Akun anda telah terdaftar! silahkan login.
@@ -64,6 +65,7 @@ if (isset($_POST['submit'])) {
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <?php endif; ?>
             <?php endif; ?>
             <hr>
             <form action="" method="post">
